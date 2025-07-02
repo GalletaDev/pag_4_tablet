@@ -1,0 +1,107 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Estilos generales para tablas */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Encabezados */
+thead tr {
+  background-color: #952ef1;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+thead tr th {
+  padding: 12px 15px;
+  border-bottom: 2px solid #6411ae;
+}
+
+/* Celdas del cuerpo */
+tbody tr td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra stripes en filas pares */
+tbody tr:nth-child(even) {
+  background-color: #f1f3f5;
+}
+
+/* Hover en filas para mejor lectura */
+tbody tr:hover {
+  background-color: #e9f5ff;
+  cursor: default;
+}
+
+/* Para la tabla con colspan en encabezado */
+thead tr th[colspan] {
+  background-color: #8931f3;
+  font-size: 1.3em;
+  text-align: center;
+  border-bottom: 3px solid #5c0cbe;
+  padding: 15px 10px;
+}
+
+/* Celdas especiales con fondo rojo */
+td.bg-red, th.bg-red {
+  background-color: #471387;
+  color: white;
+  text-align: center;
+}
+
+/* Ajustes para tablas con border */
+table[border] {
+  border: none;
+  max-width: 775px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  table, thead, tbody, tr, th, td {
+    display: block;
+  }
+  thead tr {
+    display: none;
+  }
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  tbody tr td {
+    border: none;
+    padding-left: 50%;
+    position: relative;
+  }
+  tbody tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
